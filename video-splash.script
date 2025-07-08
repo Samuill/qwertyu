@@ -1,0 +1,20 @@
+// Simple frame-based animation splash
+funtion start_animation ()
+{
+    Image anim[];
+    int num_frames = 0;
+    int i;
+
+    for (i = 1; i <= 60; i++) {
+        anim[num_frames++] = Image("frame_" + sprintf("%04d", i) + ".png");
+    }
+
+    i = 0;
+    while (plymouth_should_continue_animation()) {
+        anim[i % num_frames].DrawCentered();
+        i++;
+        sleep(0.05);
+    }
+}
+
+start_animation();
