@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=Video Splash
+Description=Fullscreen PNG animation splash
+ModuleName=script
+
+[boot-splash]
+ImageDir=/usr/share/plymouth/themes/video-splash
+ScriptFile=/usr/share/plymouth/themes/video-splash/video-splash.script
